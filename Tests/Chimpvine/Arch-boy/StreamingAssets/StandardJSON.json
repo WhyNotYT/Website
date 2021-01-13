@@ -6,7 +6,7 @@
         "Incorrect1": "Fruit",
         "Incorrect2": "Shoot",
         "Incorrect3": "Plant",
-        "Image": "",
+        "Image": "Images/ES.png",
         "Suggestion": "Check the article below to learn more about muliplication."
       },
       "What controls the actions in our body?": {
@@ -14,7 +14,7 @@
         "Incorrect1": "Lungs",
         "Incorrect2": "Heart",
         "Incorrect3": "Kidneys",
-        "Image": "",
+        "Image": "https://whynotyt.github.io/images/Portfolio/GTP.png",
         "Suggestion": "That's also like saying square of 5."
       },
       "How do plants produce their food?": {
