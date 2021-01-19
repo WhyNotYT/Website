@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-    <title>%UNITY_WEB_NAME%</title>
+    <title>Arch-boy</title>
     <style>
       html {
         box-sizing: border-box;
@@ -177,10 +177,10 @@
   <div class="expand-collapse " id="main-but"><button id="but-on" class="fa fa-expand"></button></div>
   </body>
 
-  <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+  <script src="Build/Arch-boy.loader.js"></script>
   <script>
   window.expanded=true;
-  var gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
+  var gameInstance = UnityLoader.instantiate("gameContainer", "Build", {onProgress: UnityProgress});
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
