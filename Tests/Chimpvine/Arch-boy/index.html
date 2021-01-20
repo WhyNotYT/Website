@@ -180,7 +180,7 @@
   <script src="Build/Arch-Boy.loader.js"></script>
   <script>
   window.expanded=true;
-  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Arch-Boy.wasm", {onProgress: UnityProgress});
+  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Arch-Boy.json", {onProgress: UnityProgress});
   function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
       return;
