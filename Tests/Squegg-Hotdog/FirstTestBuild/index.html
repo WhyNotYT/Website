@@ -43,6 +43,12 @@
       const progressBarFull = document.querySelector("#unity-progress-bar-full");
       const fullscreenButton = document.querySelector("#unity-fullscreen-button");
       const spinner = document.querySelector('.spinner');
+	  var lockFunction =  window.screen.orientation.lock;
+if (lockFunction.call(window.screen.orientation, 'portrait')) {
+           console.log('Orientation locked')
+} else {
+            console.error('There was a problem in locking the orientation')
+}
 
       const canFullscreen = (function() {
         for (const key of [
