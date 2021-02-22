@@ -1,241 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-    <title>"Archboy"</title>
-    <style>
-      html {
-        box-sizing: border-box;
-        overflow-y:hidden;
-      }
-      *, *:before, *:after {
-        box-sizing: inherit;
-      }
-      body {
-        margin: 0;
-        background: #ffffff;
-
-      }
-      #gameContainer {
-        width: 100vw;
-        height: 100vh;
-      }
-      canvas {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-      /* try to handle mobile dialog */
-      canvas + * {
-        z-index: 2;
-      }
-      .logo {
-          display: block;
-          max-width: 100vw;
-          max-height: 70vh;
-      }
-
-      .progress {
-          margin: 1.5em;
-          border: 1px solid black;
-          width: 50vw;
-          display: none;
-      }
-      .progress .full {
-          margin: 2px;
-          background: black;
-          height: 1em;
-          transform-origin: top left;
-      }
-
-      #loader {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .spinner,
-      .spinner:after {
-        border-radius: 50%;
-        width: 5em;
-        height: 5em;
-      }
-      .spinner {
-        margin: 10px;
-        font-size: 10px;
-        position: relative;
-        text-indent: -9999em;
-        border-top: 1.1em solid rgba(0, 0, 0, 0.2);
-        border-right: 1.1em solid rgba(0, 0, 0, 0.2);
-        border-bottom: 1.1em solid rgba(0, 0, 0, 0.2);
-        border-left: 1.1em solid #000000;
-        transform: translateZ(0);
-        animation: spinner-spin 1.1s infinite linear;
-      }
-      @keyframes spinner-spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-       }
-
-
-        /*---------personal changes in css--------*/
-       .hero{
-       }
-       .chimpvine-icone{
-        width:80%;
-       float:left;
-       padding:20px;
-       margin-right:10px;
-       }
-       .main-footer{
-       width:100%;
-       height:60px;
-       font-size:20px;
-       background:#1a1110;
-       color:white;
-       display:flex;
-       position:fixed;
-       left:0;
-       bottom:0;
-
-
-       }
-       .expand-collapse{
-       z-index:10;
-       width:20%;
-       float:right;
-       padding:10px;
-       margin-right:20px;
-       position:fixed;
-       right:0;
-       bottom:0;
-       }
-       .fa{
-       z-index:10;
-       width:30px;
-       height:30px;
-       border:none;
-       background:#1a1110;
-       color:white;
-       position:relative;
-       float:right;
-       margin-right:20px;
-       font-size:20px;
-
-
-       }
-       #main{
-           position: absolute;
-           top: 50%;
-           left: 50%;
-           -webkit-transform: translate(-50%, -50%);
-           transform: translate(-50%, -50%);
-       }
-       #gameContainer{
-       width:100%;
-       height:100%;
-
-       }
-
-
-
-
-
-
-    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Chimpvine | Archboy</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      UnityLoader.compatibilityCheck = function(e,t,r){t();};
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Arch-Boy.json", {onProgress: UnityProgress});
+    </script>
   </head>
-
   <body>
-
-  <main >
-    <div id="main">
-    <div id="gameContainer"></div>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Archboy</div>
+      </div>
     </div>
-    <div id="loader">
-      <img class="logo" src="logo.png">
-      <div class="spinner"></div>
-      <div class="progress"><div class="full"></div></div>
-    </div>
-  </main>
-  <footer id = "f-footer" class="main-footer" >
-  <div class="chimpvine-icone">Chimpvine</div>
-
-  </footer>
-  <div class="expand-collapse " id="main-but"><button id="but-on" class="fa fa-expand"></button></div>
   </body>
-
-  <script src="Build/UnityLoader.js"></script>
-  <script>
-  window.expanded=true;
-  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Arch-Boy.json", {onProgress: UnityProgress});
-  function UnityProgress(gameInstance, progress) {
-    if (!gameInstance.Module) {
-      return;
-    }
-    const loader = document.querySelector("#loader");
-    if (!gameInstance.progress) {
-      const progress = document.querySelector("#loader .progress");
-      progress.style.display = "block";
-      gameInstance.progress = progress.querySelector(".full");
-      loader.querySelector(".spinner").style.display = "none";
-    }
-    gameInstance.progress.style.transform = `scaleX(${progress})`;
-    if (progress === 1 && !gameInstance.removeTimeout) {
-      gameInstance.removeTimeout = setTimeout(function() {
-          loader.style.display = "none";
-          changeSize(window.expanded);
-      }, 2000);
-    }
-  }
-
-  function changeSize(){
-  expanded=window.expanded;
-  let canvas = document.getElementById("main");
-  if (expanded){
-  canvas.style.width="960px";
-  canvas.style.height="550px";
-  canvas.style.top="45%";
-  canvas.style.zIndex="-1";
-  expanded= false;
-  console.log(expanded);
-  return
-
-  }
-  let width=window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
-  let height=window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
-  console.log(width.toString()+"px");
-  canvas.style.width = width.toString()+"px";
-  canvas.style.height = height.toString()+"px";
-  canvas.style.zIndex="1";
-  canvas.style.top="50%";
-
-
-
-
-
-  expanded=true;
-
-  }
-
-  resize_button=document.getElementById("but-on")
-  resize_button.addEventListener("click",changeSize);
-
-
-  
-  </script>
-
 </html>
-
