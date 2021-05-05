@@ -74,6 +74,19 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
+      document.addEventListener("message", function(data) 
+      {
+
+        var obj = JSON.parse(data.data);
+		if(obj.hasOwnProperty("userName"))
+		{
+      unityInstance.SendMessage('DataHandler','ONStartData',data.data);
+		}
+		else if(obj.hasOwnProperty("gripStatus"))
+		{
+			unityInstance.SendMessage('DataHandler','OnSqueezeUpdate',data.data);
+    }
+      });
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
