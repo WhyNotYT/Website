@@ -6,6 +6,74 @@
 /* Large Mobile :480px. */
 /* 1. Theme default css */
 @import url("https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900&display=swap");
+
+
+
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border: #000;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* line 5, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 body {
   font-family: "Muli", sans-serif;
@@ -33,7 +101,8 @@ a,
 
 /* line 20, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 a:focus,
-.button:focus, button:focus {
+.button:focus,
+button:focus {
   text-decoration: none;
   outline: none;
 }
@@ -59,7 +128,11 @@ button {
 }
 
 /* line 39, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Muli", sans-serif;
   color: #001D38;
 }
@@ -266,7 +339,7 @@ h3 {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', endColorstr='#007db9e8',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5db2ff', endColorstr='#007db9e8', GradientType=1);
   /* IE6-9 */
   top: 0;
   left: 0;
@@ -682,6 +755,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 24, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_section_title.scss */
   .section_title h3 {
     font-size: 30px;
@@ -690,6 +764,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 24, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_section_title.scss */
   .section_title h3 {
     font-size: 36px;
@@ -698,6 +773,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 41, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_section_title.scss */
   .section_title h3 br {
     display: none;
@@ -714,6 +790,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 53, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_section_title.scss */
   .section_title p br {
     display: none;
@@ -742,6 +819,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 73, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_section_title.scss */
   .mb-50 {
     margin-bottom: 40px;
@@ -749,6 +827,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 4, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slick-nav.scss */
   .mobile_menu {
     position: absolute;
@@ -787,6 +866,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 35, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slick-nav.scss */
   .slicknav_menu .slicknav_nav a i {
     display: none;
@@ -794,6 +874,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 35, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slick-nav.scss */
   .slicknav_menu .slicknav_nav a i {
     display: none;
@@ -825,6 +906,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 12, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slick-nav.scss */
   .slicknav_menu {
     margin-right: 0px;
@@ -867,6 +949,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area {
     padding-top: 0;
@@ -874,6 +957,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area {
     padding-top: 0;
@@ -888,6 +972,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 16, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area {
     padding: 10px 0px;
@@ -896,6 +981,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 16, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area {
     padding: 10px 15px;
@@ -904,6 +990,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 16, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area {
     padding: 25px 0px;
@@ -911,6 +998,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 16, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area {
     padding: 25px 0px;
@@ -924,6 +1012,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 36, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area.details_nav_bg {
     padding-bottom: 10px;
@@ -936,6 +1025,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 56, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img {
     text-align: left;
@@ -943,6 +1033,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 56, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img {
     text-align: left;
@@ -950,6 +1041,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 56, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img {
     text-align: left;
@@ -957,6 +1049,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 70, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img img {
     width: 70px;
@@ -964,6 +1057,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 70, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img img {
     width: 70px;
@@ -989,6 +1083,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 86, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .Appointment .search_button {
     margin-right: 15px;
@@ -996,6 +1091,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 86, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .Appointment .search_button {
     margin-right: 15px;
@@ -1030,6 +1126,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 116, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .Appointment .book_btn {
     margin-left: 0;
@@ -1037,6 +1134,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 116, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .Appointment .book_btn {
     margin-left: 0;
@@ -1057,6 +1155,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 124, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .Appointment .book_btn a {
     padding: 12px 20px;
@@ -1097,6 +1196,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 157, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a {
     font-size: 15px;
@@ -1104,6 +1204,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 157, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a {
     font-size: 15px;
@@ -1116,6 +1217,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 176, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a i {
     display: none !important;
@@ -1123,6 +1225,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 176, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a i {
     display: none !important;
@@ -1187,14 +1290,14 @@ h3 {
 }
 
 /* line 240, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
-.header-area .main-header-area .main-menu ul li:hover > .submenu {
+.header-area .main-header-area .main-menu ul li:hover>.submenu {
   opacity: 1;
   visibility: visible;
   top: 150%;
 }
 
 /* line 245, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
-.header-area .main-header-area .main-menu ul li:hover > a::before {
+.header-area .main-header-area .main-menu ul li:hover>a::before {
   opacity: 1;
   transform: scaleX(1);
 }
@@ -1222,6 +1325,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 255, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area.sticky {
     padding: 10px 0px;
@@ -1229,6 +1333,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 255, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .main-header-area.sticky {
     padding: 10px 0px;
@@ -1257,6 +1362,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 300, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .header-top_area .social_media_links {
     text-align: center;
@@ -1281,6 +1387,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 313, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .header-top_area .short_contact_list {
     text-align: center;
@@ -1300,6 +1407,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 321, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header-area .header-top_area .short_contact_list ul li a {
     margin-left: 0;
@@ -1325,6 +1433,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 343, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header_bottom_border.white_border {
     padding: 0;
@@ -1333,6 +1442,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 343, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header_bottom_border.white_border {
     padding: 0;
@@ -1341,6 +1451,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 340, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_header.scss */
   .header_bottom_border {
     padding: 0;
@@ -1389,6 +1500,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 21, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .social_links {
     display: none;
@@ -1429,7 +1541,7 @@ h3 {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #615cfd 0%, #d465ef 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#615cfd', endColorstr='#d465ef',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#615cfd', endColorstr='#d465ef', GradientType=0);
   /* IE6-9 */
   position: absolute;
   left: 0;
@@ -1475,6 +1587,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 74, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider::before {
     width: 314px;
@@ -1485,6 +1598,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 74, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider::before {
     width: 370px;
@@ -1507,6 +1621,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 96, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider::after {
     display: none;
@@ -1514,6 +1629,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 96, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider::after {
     width: 320px;
@@ -1525,6 +1641,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 8, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider {
     height: 500px;
@@ -1532,6 +1649,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 8, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider {
     height: 620px;
@@ -1545,6 +1663,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 122, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .phone_thumb {
     top: 60px;
@@ -1552,6 +1671,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 128, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .phone_thumb img {
     width: 100%;
@@ -1559,6 +1679,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 128, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .phone_thumb img {
     width: 100%;
@@ -1566,6 +1687,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 128, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .phone_thumb img {
     width: 100%;
@@ -1584,6 +1706,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 149, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 br {
     display: none;
@@ -1591,6 +1714,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 149, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 br {
     display: none;
@@ -1598,6 +1722,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 149, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 br {
     display: none;
@@ -1610,6 +1735,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 141, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 {
     font-size: 30px;
@@ -1618,6 +1744,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 141, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 {
     font-size: 30px;
@@ -1626,6 +1753,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 141, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 {
     font-size: 45px;
@@ -1656,6 +1784,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 180, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text span {
     font-size: 16px;
@@ -1663,6 +1792,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 180, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text span {
     font-size: 16px;
@@ -1670,13 +1800,14 @@ h3 {
 }
 
 /* line 203, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
-.slider_area .single_slider .slider_text .video_service_btn > a {
+.slider_area .single_slider .slider_text .video_service_btn>a {
   margin-right: 15px;
 }
 
 @media (max-width: 767px) {
+
   /* line 203, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_slider.scss */
-  .slider_area .single_slider .slider_text .video_service_btn > a {
+  .slider_area .single_slider .slider_text .video_service_btn>a {
     margin-bottom: 20px;
   }
 }
@@ -1687,6 +1818,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area {
     padding: 30px 0 40px 0;
@@ -1694,6 +1826,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area {
     padding: 30px 0 40px 0;
@@ -1716,6 +1849,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 19, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_main_wrap {
     padding: 30px 0;
@@ -1723,6 +1857,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 25, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_main_wrap .about_image img {
     width: 100%;
@@ -1730,6 +1865,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 32, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info2 {
     margin-bottom: 30px;
@@ -1745,6 +1881,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 36, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info2 h3 {
     font-size: 30px;
@@ -1753,6 +1890,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 36, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info2 h3 {
     font-size: 35px;
@@ -1761,6 +1899,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 36, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info2 h3 {
     font-size: 30px;
@@ -1780,6 +1919,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 62, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info2 p br {
     display: none;
@@ -1792,6 +1932,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 69, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info {
     padding-top: 50px;
@@ -1802,6 +1943,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 69, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info {
     padding-left: 30px;
@@ -1811,6 +1953,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 69, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info {
     padding-left: 30px;
@@ -1820,6 +1963,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 69, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info {
     padding-left: 30px;
@@ -1836,6 +1980,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 93, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info h3 {
     font-size: 30px;
@@ -1844,6 +1989,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 93, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info h3 {
     font-size: 38px;
@@ -1852,6 +1998,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 93, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info h3 {
     font-size: 30px;
@@ -1860,6 +2007,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 110, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info h3 br {
     display: none;
@@ -1867,6 +2015,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 110, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info h3 br {
     display: none;
@@ -1874,6 +2023,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 110, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info h3 br {
     display: none;
@@ -1890,6 +2040,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 128, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info p br {
     display: none;
@@ -1902,6 +2053,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 134, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .features_area .features_info ul {
     margin-bottom: 30px;
@@ -1950,6 +2102,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 168, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .productivity_area {
     padding: 100px 0;
@@ -1965,6 +2118,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 177, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .productivity_area h3 {
     font-size: 30px;
@@ -1975,6 +2129,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 177, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .productivity_area h3 {
     margin-bottom: 30px;
@@ -1987,6 +2142,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 192, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .productivity_area .app_download {
     text-align: center;
@@ -1994,6 +2150,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 192, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .productivity_area .app_download {
     text-align: center;
@@ -2006,6 +2163,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 200, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_features.scss */
   .productivity_area .app_download img {
     margin: 5px 0;
@@ -2019,6 +2177,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_counter.scss */
   .counter_area {
     padding-bottom: 30px;
@@ -2050,6 +2209,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 15, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_counter.scss */
   .counter_area .single_counter h3 span {
     font-size: 35px;
@@ -2083,6 +2243,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_about.scss */
   .about_me {
     padding-top: 0;
@@ -2091,6 +2252,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_about.scss */
   .about_me {
     padding-bottom: 100px;
@@ -2109,6 +2271,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 21, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_about.scss */
   .about_me .about_e_details {
     margin-bottom: 30px;
@@ -2145,6 +2308,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 45, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_about.scss */
   .about_me .about_img .color_pattern {
     right: 0;
@@ -2152,6 +2316,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 45, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_about.scss */
   .about_me .about_img .color_pattern {
     right: 0;
@@ -2169,6 +2334,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 66, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_about.scss */
   .project_area {
     padding-bottom: 50px;
@@ -2186,6 +2352,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 76, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_about.scss */
   .project_area .projects_info {
     padding-left: 0;
@@ -2216,6 +2383,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_gallery.scss */
   .gallery_area {
     padding-top: 50px;
@@ -2224,6 +2392,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_gallery.scss */
   .gallery_area {
     padding-top: 100px;
@@ -2322,6 +2491,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 64, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_gallery.scss */
   .portfolio_details_area {
     padding-top: 100px;
@@ -2330,6 +2500,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 64, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_gallery.scss */
   .portfolio_details_area {
     padding-top: 100px;
@@ -2360,6 +2531,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 86, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_gallery.scss */
   .portfolio_details_area .portfolio_details_content h3 {
     font-size: 25px;
@@ -2388,6 +2560,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 112, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_gallery.scss */
   .mt-50 {
     margin-top: 30px;
@@ -2400,6 +2573,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 118, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_gallery.scss */
   .mb-50 {
     margin-bottom: 30px;
@@ -2422,6 +2596,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 6, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_footer.scss */
   .footer .footer_top {
     padding-top: 50px;
@@ -2430,6 +2605,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 6, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_footer.scss */
   .footer .footer_top {
     padding-top: 50px;
@@ -2444,6 +2620,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 20, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_footer.scss */
   .footer .footer_top .menu_links ul li {
     margin-right: 20px;
@@ -2483,6 +2660,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 45, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_footer.scss */
   .footer .copy-right_text .copy_right {
     font-size: 13px;
@@ -2500,6 +2678,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 58, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_footer.scss */
   .footer .socail_links {
     text-align: left;
@@ -2543,6 +2722,10 @@ h3 {
   background-image: url(../img/banner/bradcam.png);
 }
 
+.bradcam_bg_trinity {
+  background-image: url(../img/banner/trinity.png);
+}
+
 /* line 4, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_bradcam.scss */
 .breadcam_bg_2 {
   background-image: url(../img/banner/bradcam_2.png);
@@ -2569,6 +2752,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 13, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_bradcam.scss */
   .bradcam_area {
     padding: 120px 0;
@@ -2585,6 +2769,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 35, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_bradcam.scss */
   .bradcam_area h3 {
     font-size: 30px;
@@ -2907,7 +3092,7 @@ h3 {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, rgba(0, 29, 56, 0) 0%, #001d38 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00001d38', endColorstr='#001d38',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00001d38', endColorstr='#001d38', GradientType=1);
   /* IE6-9 */
   left: 0;
   top: 0;
@@ -2916,6 +3101,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 2, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_tesmonial.scss */
   .testimonial_area {
     padding: 50px 0;
@@ -2932,6 +3118,7 @@ h3 {
 }
 
 @media (min-width: 320px) and (max-width: 1500px) {
+
   /* line 33, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_tesmonial.scss */
   .testimonial_area .single_testmonial p br {
     display: none;
@@ -2988,6 +3175,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_discuss.scss */
   .discuss_projects {
     padding: 50px 0 50px 0;
@@ -2995,6 +3183,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_discuss.scss */
   .discuss_projects {
     padding: 100px 0 50px 0;
@@ -3009,6 +3198,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 11, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_discuss.scss */
   .discuss_projects .project_text h3 {
     font-size: 38px;
@@ -3031,6 +3221,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_service.scss */
   .service_area {
     padding-bottom: 30px;
@@ -3038,6 +3229,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_service.scss */
   .service_area {
     padding-bottom: 50px;
@@ -3056,6 +3248,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 10, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_service.scss */
   .service_area .single_service {
     padding: 30px 20px;
@@ -3072,6 +3265,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 21, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_service.scss */
   .service_area .single_service h3 {
     font-size: 22px;
@@ -3099,6 +3293,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_video.scss */
   .video_area {
     padding-top: 50px;
@@ -3136,6 +3331,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 14, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_video.scss */
   .video_area .video_wrap .thumb .video_icon a {
     width: 50px;
@@ -3150,6 +3346,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 32, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_video.scss */
   .video_area .video_wrap .thumb .video_icon a i {
     font-size: 13px;
@@ -3165,6 +3362,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 42, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_video.scss */
   .video_area .video_wrap .video_text p {
     font-size: 18px;
@@ -3173,6 +3371,7 @@ h3 {
 }
 
 @media (min-width: 320px) and (max-width: 991px) {
+
   /* line 51, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_video.scss */
   .video_area .video_wrap .video_text p br {
     display: none;
@@ -3191,6 +3390,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
   .portfolio_area {
     padding-top: 60px;
@@ -3223,6 +3423,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 29, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
   .portfolio_image_area.dec_margin {
     padding: 50px 0;
@@ -3230,6 +3431,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 29, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
   .portfolio_image_area.dec_margin {
     padding: 70px 0;
@@ -3237,6 +3439,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 29, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
   .portfolio_image_area.dec_margin {
     padding: 100px 0;
@@ -3338,6 +3541,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_experts.scss */
   .expert_doctors_area {
     padding-top: 80px;
@@ -3353,6 +3557,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 12, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_experts.scss */
   .expert_doctors_area .doctors_title h3 {
     font-size: 24px;
@@ -3485,6 +3690,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 3, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_emergency_contact.scss */
   .Emergency_contact .single_emergency {
     padding: 40px;
@@ -3505,6 +3711,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 14, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_emergency_contact.scss */
   .Emergency_contact .single_emergency .info h3 {
     font-size: 20px;
@@ -3548,6 +3755,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_prising.scss */
   .prising_area {
     padding: 50px 0 20px 0;
@@ -3560,6 +3768,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 10, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_prising.scss */
   .prising_area .section_title {
     padding-bottom: 30px;
@@ -3567,6 +3776,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 10, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_prising.scss */
   .prising_area .section_title {
     padding-bottom: 50px;
@@ -3663,7 +3873,8 @@ h3 {
 }
 
 /* line 16, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_contact.scss */
-.contact-info__icon i, .contact-info__icon span {
+.contact-info__icon i,
+.contact-info__icon span {
   color: #8f9195;
   font-size: 27px;
 }
@@ -3785,6 +3996,7 @@ h3 {
 }
 
 @media (max-width: 991px) {
+
   /* line 133, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_contact.scss */
   .contact-section {
     padding: 70px 0 40px;
@@ -3792,6 +4004,7 @@ h3 {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
   /* line 133, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_contact.scss */
   .contact-section {
     padding: 80px 0 50px;
@@ -4524,7 +4737,7 @@ h6 {
 }
 
 /* line 619, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.default-switch input + label {
+.default-switch input+label {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -4541,7 +4754,7 @@ h6 {
 }
 
 /* line 632, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.default-switch input:checked + label {
+.default-switch input:checked+label {
   left: 19px;
 }
 
@@ -4568,7 +4781,7 @@ h6 {
 }
 
 /* line 655, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.primary-switch input + label {
+.primary-switch input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4579,7 +4792,7 @@ h6 {
 }
 
 /* line 663, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.primary-switch input + label:before {
+.primary-switch input+label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -4598,7 +4811,7 @@ h6 {
 }
 
 /* line 677, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.primary-switch input + label:after {
+.primary-switch input+label:after {
   content: "";
   position: absolute;
   top: 1px;
@@ -4616,12 +4829,12 @@ h6 {
 }
 
 /* line 693, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.primary-switch input:checked + label:after {
+.primary-switch input:checked+label:after {
   left: 19px;
 }
 
 /* line 696, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.primary-switch input:checked + label:before {
+.primary-switch input:checked+label:before {
   background: #ff5e13;
 }
 
@@ -4648,7 +4861,7 @@ h6 {
 }
 
 /* line 720, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.confirm-switch input + label {
+.confirm-switch input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4659,7 +4872,7 @@ h6 {
 }
 
 /* line 728, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.confirm-switch input + label:before {
+.confirm-switch input+label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -4678,7 +4891,7 @@ h6 {
 }
 
 /* line 742, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.confirm-switch input + label:after {
+.confirm-switch input+label:after {
   content: "";
   position: absolute;
   top: 1px;
@@ -4696,12 +4909,12 @@ h6 {
 }
 
 /* line 758, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.confirm-switch input:checked + label:after {
+.confirm-switch input:checked+label:after {
   left: 19px;
 }
 
 /* line 761, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.confirm-switch input:checked + label:before {
+.confirm-switch input:checked+label:before {
   background: #4cd3e3;
 }
 
@@ -4728,7 +4941,7 @@ h6 {
 }
 
 /* line 785, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.primary-checkbox input + label {
+.primary-checkbox input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4742,7 +4955,7 @@ h6 {
 }
 
 /* line 798, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.primary-checkbox input:checked + label {
+.primary-checkbox input:checked+label {
   background: url(../img/elements/primary-check.png) no-repeat center center/cover;
   border: none;
 }
@@ -4770,7 +4983,7 @@ h6 {
 }
 
 /* line 822, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.confirm-checkbox input + label {
+.confirm-checkbox input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4784,7 +4997,7 @@ h6 {
 }
 
 /* line 835, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.confirm-checkbox input:checked + label {
+.confirm-checkbox input:checked+label {
   background: url(../img/elements/success-check.png) no-repeat center center/cover;
   border: none;
 }
@@ -4812,7 +5025,7 @@ h6 {
 }
 
 /* line 859, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.disabled-checkbox input + label {
+.disabled-checkbox input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4832,7 +5045,7 @@ h6 {
 }
 
 /* line 876, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.disabled-checkbox input:checked + label {
+.disabled-checkbox input:checked+label {
   background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
   border: none;
 }
@@ -4860,7 +5073,7 @@ h6 {
 }
 
 /* line 900, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.primary-radio input + label {
+.primary-radio input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4874,7 +5087,7 @@ h6 {
 }
 
 /* line 913, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.primary-radio input:checked + label {
+.primary-radio input:checked+label {
   background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
   border: none;
 }
@@ -4902,7 +5115,7 @@ h6 {
 }
 
 /* line 937, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.confirm-radio input + label {
+.confirm-radio input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4916,7 +5129,7 @@ h6 {
 }
 
 /* line 950, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.confirm-radio input:checked + label {
+.confirm-radio input:checked+label {
   background: url(../img/elements/success-radio.png) no-repeat center center/cover;
   border: none;
 }
@@ -4944,7 +5157,7 @@ h6 {
 }
 
 /* line 974, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.disabled-radio input + label {
+.disabled-radio input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4964,7 +5177,7 @@ h6 {
 }
 
 /* line 991, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_elements.scss */
-.disabled-radio input:checked + label {
+.disabled-radio input:checked+label {
   background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
   border: none;
 }
@@ -5135,7 +5348,8 @@ h6 {
 }
 
 /* line 14, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
-.blog_area a:hover, .blog_area a :hover {
+.blog_area a:hover,
+.blog_area a :hover {
   background: -webkit-linear-gradient(131deg, #615CFD 0%, #615CFD 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5220,10 +5434,12 @@ h6 {
 }
 
 @media (max-width: 1199px) {
+
   /* line 74, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-blog .tag {
     margin-right: 8px;
   }
+
   /* line 98, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-blog .tag:after {
     display: none;
@@ -5236,6 +5452,7 @@ h6 {
 }
 
 @media (max-width: 800px) {
+
   /* line 24, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-blog {
     margin-bottom: 30px;
@@ -5261,6 +5478,7 @@ h6 {
 }
 
 @media (max-width: 1199px) {
+
   /* line 112, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-blog .single-blog-content {
     padding: 15px;
@@ -5275,6 +5493,7 @@ h6 {
 }
 
 @media (max-width: 1199px) {
+
   /* line 143, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-blog h4 {
     transition: all 300ms linear 0s;
@@ -5282,6 +5501,7 @@ h6 {
     padding-bottom: 14px;
     margin-bottom: 12px;
   }
+
   /* line 149, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-blog h4 a {
     font-size: 18px;
@@ -5305,6 +5525,7 @@ h6 {
 }
 
 @media (min-width: 992px) {
+
   /* line 160, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .full_image.single-blog .single-blog-content {
     bottom: 100px;
@@ -5466,7 +5687,7 @@ h6 {
 }
 
 /* line 358, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
-.causes_item .causes_bottom a + a {
+.causes_item .causes_bottom a+a {
   border-color: #eeeeee;
   background: #fff;
   font-size: 14px;
@@ -5531,7 +5752,7 @@ h6 {
 }
 
 /* line 431, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
-.tags .tag_btn + .tag_btn {
+.tags .tag_btn+.tag_btn {
   margin-left: 2px;
 }
 
@@ -5543,6 +5764,7 @@ h6 {
 }
 
 @media (min-width: 900px) {
+
   /* line 438, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .blog_categorie_area {
     padding-top: 80px;
@@ -5551,6 +5773,7 @@ h6 {
 }
 
 @media (min-width: 1100px) {
+
   /* line 438, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .blog_categorie_area {
     padding-top: 120px;
@@ -5629,6 +5852,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 529, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .blog_details {
     padding: 60px 30px 35px 35px;
@@ -5658,6 +5882,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 549, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .blog_details h2 {
     font-size: 24px;
@@ -5721,6 +5946,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 599, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .blog_item_img .blog_item_date {
     bottom: -20px;
@@ -5739,6 +5965,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 615, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .blog_item_img .blog_item_date h3 {
     font-size: 30px;
@@ -5753,6 +5980,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 627, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .blog_item_img .blog_item_date p {
     font-size: 18px;
@@ -5887,7 +6115,7 @@ h6 {
 }
 
 /* line 774, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
-.blog_right_sidebar .post_category_widget .cat-list li + li {
+.blog_right_sidebar .post_category_widget .cat-list li+li {
   padding-top: 15px;
 }
 
@@ -5919,7 +6147,7 @@ h6 {
 }
 
 /* line 820, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
-.blog_right_sidebar .popular_post_widget .post_item + .post_item {
+.blog_right_sidebar .popular_post_widget .post_item+.post_item {
   margin-top: 20px;
 }
 
@@ -6064,6 +6292,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 1087, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-post-area .quote-wrapper {
     padding: 30px;
@@ -6078,6 +6307,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 1101, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-post-area .quotes {
     padding: 25px 25px 25px 30px;
@@ -6161,6 +6391,7 @@ h6 {
 }
 
 @media (max-width: 600px) {
+
   /* line 1182, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-post-area .blog-author {
     padding: 20px 8px;
@@ -6176,6 +6407,7 @@ h6 {
 }
 
 @media (max-width: 600px) {
+
   /* line 1191, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-post-area .blog-author img {
     margin-right: 15px;
@@ -6259,6 +6491,7 @@ h6 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1240, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-post-area .navigation-area .nav-left {
     margin-bottom: 30px;
@@ -6301,6 +6534,7 @@ h6 {
 }
 
 @media (max-width: 991px) {
+
   /* line 1307, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .single-post-area .sidebar-widgets {
     padding-bottom: 0px;
@@ -6316,6 +6550,7 @@ h6 {
 }
 
 @media (max-width: 414px) {
+
   /* line 1314, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .comments-area {
     padding: 50px 8px;
@@ -6350,14 +6585,17 @@ h6 {
 }
 
 @media (max-width: 413px) {
+
   /* line 1354, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .comments-area .comment-list .single-comment h5 {
     font-size: 12px;
   }
+
   /* line 1358, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .comments-area .comment-list .single-comment .date {
     font-size: 11px;
   }
+
   /* line 1362, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .comments-area .comment-list .single-comment .comment {
     font-size: 10px;
@@ -6426,6 +6664,7 @@ h6 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1428, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .comment-form .name {
     padding-right: 0px;
@@ -6439,6 +6678,7 @@ h6 {
 }
 
 @media (max-width: 991px) {
+
   /* line 1437, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog.scss */
   .comment-form .email {
     padding-left: 0px;
@@ -6515,6 +6755,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 2, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part {
     margin-bottom: 0px;
@@ -6523,6 +6764,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 2, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part {
     margin-bottom: 0px;
@@ -6531,6 +6773,7 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /* line 2, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part {
     margin-bottom: 0px;
@@ -6546,6 +6789,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 24, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog {
     margin-bottom: 140px;
@@ -6554,6 +6798,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 24, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog {
     margin-bottom: 140px;
@@ -6562,6 +6807,7 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /* line 24, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog {
     margin-bottom: 140px;
@@ -6594,6 +6840,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 48, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card .card-body {
     padding: 15px;
@@ -6603,6 +6850,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 48, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card .card-body {
     padding: 15px;
@@ -6612,6 +6860,7 @@ h6 {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
   /* line 48, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card .card-body {
     padding: 20px;
@@ -6660,6 +6909,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 97, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card span {
     margin-bottom: 5px;
@@ -6668,6 +6918,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 97, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card span {
     margin-bottom: 5px;
@@ -6676,6 +6927,7 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /* line 97, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card span {
     margin-bottom: 5px;
@@ -6684,6 +6936,7 @@ h6 {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
   /* line 97, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card span {
     margin-bottom: 5px;
@@ -6703,6 +6956,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 119, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card h5 {
     margin-bottom: 10px;
@@ -6710,6 +6964,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 119, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card h5 {
     margin-bottom: 10px;
@@ -6718,6 +6973,7 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /* line 119, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card h5 {
     margin-bottom: 10px;
@@ -6725,6 +6981,7 @@ h6 {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
   /* line 119, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card h5 {
     margin-bottom: 10px;
@@ -6750,6 +7007,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 150, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card ul li {
     margin-right: 10px;
@@ -6757,6 +7015,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 150, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card ul li {
     margin-right: 10px;
@@ -6764,6 +7023,7 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /* line 150, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card ul li {
     margin-right: 10px;
@@ -6771,6 +7031,7 @@ h6 {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
   /* line 150, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card ul li {
     margin-right: 10px;
